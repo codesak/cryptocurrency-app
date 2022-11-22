@@ -2,7 +2,7 @@ import React from 'react'
 
 const Exchanges = () => {
   return (
-    <div>Exchanges</div>
+    <div><h1>45674185296374185855555</h1></div>
   )
 }
 
