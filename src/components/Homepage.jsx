@@ -6,6 +6,7 @@ import News from './News'
 import Cryptocurrencies from "./Cryptocurrencies"
 
 import { useGetCoinsQuery } from '../services/cryptoApi'
+import Loader from './Loader'
 
 
 
@@ -16,7 +17,7 @@ const Homepage = () => {
   
   const {data, isFetching}= useGetCoinsQuery(10)
   
-  if(isFetching) return 'Loading...';
+  if(isFetching) return <Loader/>;
 
   const globalStats = data?.data?.stats;
   

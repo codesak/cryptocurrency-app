@@ -4,6 +4,7 @@ import { useGetCoinsQuery } from '../services/cryptoApi'
 import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
+import Loader from './Loader';
 
 
 const Cryptocurrencies = ({ simplified }) => {
@@ -22,7 +23,7 @@ const Cryptocurrencies = ({ simplified }) => {
   }, [data, search])
 
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader/>;
 
   return (
     <div>
