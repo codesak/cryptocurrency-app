@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
+import { Chart as ChartJS } from 'chart.js/auto'  //imp for chart
 
 const { Title } = Typography;
 
@@ -27,7 +28,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
       },
     ],
   };
-
+  
   const options = {
     scales: {
       yAxes: [
